@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_margin="10dp">
+
+    <com.haipq.android.flagkit.FlagImageView
+        android:id="@+id/iv_flag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                style="@style/text_black"
+                android:text="@string/full_name"
+                android:layout_weight="0.3" />
+
+            <TextView
+                style="@style/text_black"
+                android:id="@+id/tv_full_name"
+                android:layout_width="0dp"
+                android:layout_weight="0.7" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_black"
+                android:layout_width="0dp"
+                android:text="@string/age"
+                android:layout_weight="0.3" />
+
+            <TextView
+                style="@style/text_black"
+                android:id="@+id/tv_age"
+                android:layout_width="0dp"
+                android:layout_weight="0.7" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_black"
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:text="@string/birthdate" />
+
+            <TextView
+                style="@style/text_black"
+                android:id="@+id/tv_birth_date"
+                android:layout_width="0dp"
+                android:layout_weight="0.7" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_black"
+                android:layout_width="0dp"
+                android:text="@string/height"
+                android:layout_weight="0.3" />
+
+            <TextView
+                style="@style/text_black"
+                android:id="@+id/tv_height"
+                android:layout_width="0dp"
+                android:layout_weight="0.7" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_black"
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:text="@string/weight" />
+
+            <TextView
+                style="@style/text_black"
+                android:id="@+id/tv_weight"
+                android:layout_width="0dp"
+                android:layout_weight="0.7" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_black"
+                android:layout_width="0dp"
+                android:text="@string/birth_place"
+                android:layout_weight="0.3" />
+
+            <TextView
+                style="@style/text_black"
+                android:id="@+id/tv_birth_place"
+                android:layout_width="0dp"
+                android:layout_weight="0.7" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_black"
+                android:layout_width="0dp"
+                android:text="@string/nationality"
+                android:layout_weight="0.3" />
+
+            <TextView
+                style="@style/text_black"
+                android:id="@+id/tv_nationality"
+                android:layout_width="0dp"
+                android:layout_weight="0.7" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ok"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="15dp"
+        android:textSize="15sp"
+        android:layout_margin="10dp"/>
+
+</LinearLayout>
