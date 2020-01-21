@@ -210,13 +210,21 @@ public class TeamFragment extends Fragment {
                         }
                         return lhs.getPerson().getFullName().compareTo(rhs.getPerson().getFullName());
                     } else {
+                        int result = 0;
                         if (lhs.getJerseyNumber() == null) {
                             return (rhs.getJerseyNumber() != null) ? 0 : -1;
                         }
                         if (rhs.getJerseyNumber() == null) {
                             return 1;
                         }
-                        return lhs.getJerseyNumber().compareTo(rhs.getJerseyNumber());
+                        if (Integer.parseInt(lhs.getJerseyNumber()) > Integer.parseInt(rhs.getJerseyNumber())) {
+                            result = 1;
+                        } else if (Integer.parseInt(lhs.getJerseyNumber()) < Integer.parseInt(rhs.getJerseyNumber())) {
+                            result = -1;
+                        } else {
+                            result = 0;
+                        }
+                        return  result;
                     }
                 }
             });
