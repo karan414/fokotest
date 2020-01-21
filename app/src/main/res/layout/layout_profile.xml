@@ -19,6 +19,7 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/ll_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -37,6 +38,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_age"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -55,6 +57,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_birthdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -73,6 +76,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_height"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -91,6 +95,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_weight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -109,6 +114,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_birth_place"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -127,6 +133,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_nationality"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -150,6 +157,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/ok"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:background="@drawable/button_background"
         android:layout_gravity="center"
         android:gravity="center"
         android:padding="15dp"

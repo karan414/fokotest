@@ -10,6 +10,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.Filter;
 import android.widget.Filterable;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -86,42 +87,71 @@ public class TeamPlayersAdapter extends RecyclerView.Adapter<TeamPlayersAdapter.
 
         FlagImageView iv_flag = (FlagImageView) dialog.findViewById(R.id.iv_flag);
         if (!Utility.isNullOrEmpty(profile.getNationality())) {
-            AppLogger.LogE(TAG, profile.getNationality());
+            iv_flag.setVisibility(View.VISIBLE);
             iv_flag.setCountryCode(Utility.getCountryCode(profile.getNationality()));
+        } else {
+            iv_flag.setVisibility(View.GONE);
         }
 
         TextView tv_full_name = (TextView) dialog.findViewById(R.id.tv_full_name);
-        if (!Utility.isNullOrEmpty(profile.getFullName()))
+        LinearLayout ll_full_name = (LinearLayout) dialog.findViewById(R.id.ll_name);
+        if (!Utility.isNullOrEmpty(profile.getFullName())) {
             tv_full_name.setText(profile.getFullName());
+            ll_full_name.setVisibility(View.VISIBLE);
+        }
+        else
+            ll_full_name.setVisibility(View.GONE);
 
         TextView tv_age = (TextView) dialog.findViewById(R.id.tv_age);
-        if (!Utility.checkIntIsNull(profile.getCurrentAge()))
-            tv_age.setText(""+profile.getCurrentAge());
+        LinearLayout ll_age = (LinearLayout) dialog.findViewById(R.id.ll_age);
+        if (!Utility.checkIntIsNull(profile.getCurrentAge())) {
+            tv_age.setText("" + profile.getCurrentAge());
+            ll_age.setVisibility(View.VISIBLE);
+        }
+        else
+            ll_age.setVisibility(View.GONE);
 
         TextView tv_birth_date = (TextView) dialog.findViewById(R.id.tv_birth_date);
-        if (!Utility.isNullOrEmpty(profile.getBirthdate()))
+        LinearLayout ll_birth_date = (LinearLayout) dialog.findViewById(R.id.ll_birthdate);
+        if (!Utility.isNullOrEmpty(profile.getBirthdate())) {
             tv_birth_date.setText(profile.getBirthdate());
+            ll_birth_date.setVisibility(View.VISIBLE);
+        }
+        else
+            ll_birth_date.setVisibility(View.GONE);
 
         TextView tv_height = (TextView) dialog.findViewById(R.id.tv_height);
-        if (!Utility.isNullOrEmpty(profile.getHeight()))
+        LinearLayout ll_height = (LinearLayout) dialog.findViewById(R.id.ll_height);
+        if (!Utility.isNullOrEmpty(profile.getHeight())) {
+            ll_height.setVisibility(View.VISIBLE);
             tv_height.setText(profile.getHeight());
+        }
+        else
+            ll_height.setVisibility(View.GONE);
 
         TextView tv_weight = (TextView) dialog.findViewById(R.id.tv_weight);
         tv_weight.setText(""+profile.getWeight());
 
         String birth_place = "";
         TextView tv_birth_place = (TextView) dialog.findViewById(R.id.tv_birth_place);
+        LinearLayout ll_birth_place = (LinearLayout) dialog.findViewById(R.id.ll_birth_place);
         if (!Utility.isNullOrEmpty(profile.getBirthCity()) && !Utility.isNullOrEmpty(profile.getBirthCountry())
                  && !Utility.isNullOrEmpty(profile.getBirthStateProvince())) {
             birth_place += profile.getBirthCity() + ", " + profile.getBirthStateProvince() + ", "
                     + Utility.getCountryName(Utility.getCountryCode(profile.getBirthCountry()));
             tv_birth_place.setText(birth_place);
+            ll_birth_place.setVisibility(View.VISIBLE);
+        } else {
+            ll_birth_place.setVisibility(View.GONE);
         }
 
         TextView tv_nationality = (TextView) dialog.findViewById(R.id.tv_nationality);
+        LinearLayout ll_nationality = (LinearLayout) dialog.findViewById(R.id.ll_nationality);
         if(!Utility.isNullOrEmpty(profile.getNationality())) {
+            ll_nationality.setVisibility(View.VISIBLE);
             tv_nationality.setText(Utility.getCountryName(Utility.getCountryCode(profile.getBirthCountry())));
-        }
+        } else
+            ll_nationality.setVisibility(View.GONE);
 
         Button bt_ok = (Button) dialog.findViewById(R.id.bt_ok);
         bt_ok.setOnClickListener(new View.OnClickListener() {
